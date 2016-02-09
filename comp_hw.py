@@ -1,3 +1,5 @@
+
+
 orig_sent = "List Comprehensions are the Greatest!"
 vowels = ["a", "e", "i", "o", "u"]
 new_sent = "".join([letter for letter in orig_sent if not letter in vowels])
@@ -57,18 +59,15 @@ d = {
 'River': {'Homework 1': 85, 'Homework 2': 91}
  }
 
+def avg_hw1(d):
+    grades = [
+    value['Homework 1']
+    for key, value in d.items()
+    ]
+    hw_avg = sum(grades) / len(grades)
+    return hw_avg
 
-for key, value in d.items():
-    print(list(d[key].values()))
+hw1_avg = avg_hw1(d)
+print(hw1_avg)
 
 
-#gale_hw = list((d['Gale'].values()))
-#jordan_hw = list((d['Jordan'].values()))
-#peyton_hw = list((d['Peyton'].values()))
-#river_hw = list((d['River'].values()))
-
-#new_nums = gale_hw[1] + jordan_hw[1] + peyton_hw[1] +river_hw[1]
-#students = ("Gale", "Jordan", "Peyton", "River")
-#print (new_nums)
-#hw1_avg = new_nums / len(students)
-#print(hw1_avg)
